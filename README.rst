@@ -84,8 +84,8 @@ client 初始化完成。token 可以被保存下来供下次调用时直接使�
 
 参考 `微博开发文档 <http://open.weibo.com/wiki/API%E6%96%87%E6%A1%A3_V2>`_ 进行接口调用。
 
-API更新
-发布的文字微博后面必须要有安全链接，safe_link为微博开发平台填写的安全链接。
+API更新  
+发布的文字微博后面必须要有安全链接，safe_link 为微博开发平台填写的安全链接。
 
 .. code:: python
 

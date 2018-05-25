@@ -35,6 +35,8 @@ Weibo
 
 - 在 '应用信息 -> '高级信息' 里面设置好 '授权回调页'.
 
+- 设置安全连接
+
 示例
 ~~~~
 
@@ -82,14 +84,17 @@ client 初始化完成。token 可以被保存下来供下次调用时直接使�
 
 参考 `微博开发文档 <http://open.weibo.com/wiki/API%E6%96%87%E6%A1%A3_V2>`_ 进行接口调用。
 
+API更新
+发布的文字微博后面必须要有安全链接，`safe_link`为微博开发平台填写的安全链接。
+
 .. code:: python
 
     >>> c.get('users/show', uid=1282440983)
-    >>> c.post('statuses/update', status='python sdk test, check out http://lxyu.github.io/weibo/')
+    >>> c.post('statuses/share', status='Test' + safe_link)
 
 client 兼容上传图片接口。
 
 .. code:: python
 
     >>> f = open('avatar.png', 'rb')
-    >>> c.post('statuses/upload', status='new avatar!', pic=f)
+    >>> c.post('statuses/share', status='Test' + safe_link, pic=f)
